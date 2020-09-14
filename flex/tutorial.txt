@@ -1,0 +1,23 @@
+1. Create your .lex file, this will contain your regular expressions for tokenizing/processing your input text file.
+- Note: When adding new rules, test them separately and add them one at a time. Order of precedence matters!
+
+
+2. With your .lex file complete, compile it.
+
+    $ flex flex_file_name.flex
+
+This will create the lex.yy.c file, which will contain, among other things, the state table that represents the minimized DFA for the regular expressions put in in the .flex file in step 1. Usually, we won't mess with this file much.
+
+
+3. Now, we compile the .yy.c file with a C++ compiler like g++.
+
+    $ g++ -o executable_name lex.yy.c -lfl
+
+Note: The -lfl flag calls the flex library.
+
+Afterwards, you will see an executable in the current directory.
+
+
+4. To tokenize a text file, run the executable.
+
+    $ ./executable_name <infile>
