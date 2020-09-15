@@ -1,0 +1,5 @@
+Document 1: some words
+3.140000 is a float
+input=1
+	output=2
+	m
