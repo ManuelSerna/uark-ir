@@ -1,0 +1,6 @@
+manuel 4
+bob 7
+alice 1
+gunther 2
+enrique 1
+chinua 5
