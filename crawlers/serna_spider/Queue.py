@@ -2,6 +2,7 @@
 # Queue class
 # FIFO
 # This implementation assumes that every unused element in the queue is None.
+# Author: Manuel Serna-Aguilera
 #************************************************
 
 class Queue():
@@ -10,6 +11,7 @@ class Queue():
     '''
     Input:
         length: length of queue
+    Return: NA
     '''
     #=============================
     def __init__(self, length):
@@ -66,9 +68,8 @@ class Queue():
     def enqueue(self, x):
         if self.is_full():
             #raise Exception("Queue overflow!")
-            # NOTE: may want to simply pass if we cannot enqueue
-            print(' NOTICE: Too ful! Not insering {}'.format(x))
-            #pass
+            #print(' NOTICE: Too full! Not insering {}'.format(x))
+            pass
         else:
             self.Q[self.tail] = x
             if self.tail == self.length-1:
@@ -82,7 +83,7 @@ class Queue():
     Input: NA
     Return:
         x: element at position 'self.head'
-        OR
+         -OR-
         None: if queue is empty
     '''
     #=============================
